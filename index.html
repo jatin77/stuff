@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Stuff</title>
+  </head>
+
+  <body>
+    <!-----------------------Header---------------------->
+    <header>
+      <div class="logo">Stuff</div>
+
+      <ul>
+        <li>
+          <a href="#"> <i class="fa fa-search" aria-hidden="true"></i></a>
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <a href="#"
+            >Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+      <i class="fa fa-bars burger" aria-hidden="true"></i>
+    </header>
+    <!-------------------Products----------------->
+    <main>
+      <div class="products-container">
+        <div class="product">
+          <div class="product-content">
+            <div class="product-title">
+              <h1>Jordan 01</h1>
+            </div>
+            <div class="product-about">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              provident quisquam natus nisi excepturi, modi
+            </div>
+            <div class="product-purchase-details">
+              <button class="product-purchase-btn">ADD TO BAG</button>
+              <div class="product-values">
+                <span>$</span>
+                <span class="product-price">600.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-image">
+            <img src="jordan-1.jpg" alt="" />
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-content">
+            <div class="product-title">
+              <h1>Jordan 02</h1>
+            </div>
+            <div class="product-about">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              provident quisquam natus nisi excepturi, modi
+            </div>
+            <div class="product-purchase-details">
+              <button class="product-purchase-btn">ADD TO BAG</button>
+              <div class="product-values">
+                <span>$</span>
+                <span class="product-price">425.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-image">
+            <img src="jordan-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-content">
+            <div class="product-title">
+              <h1>Jordan 03</h1>
+            </div>
+            <div class="product-about">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              provident quisquam natus nisi excepturi, modi
+            </div>
+            <div class="product-purchase-details">
+              <button class="product-purchase-btn">ADD TO BAG</button>
+              <div class="product-values">
+                <span>$</span>
+                <span class="product-price">430.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-image">
+            <img src="jordan-4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-content">
+            <div class="product-title">
+              <h1>Jordan 04</h1>
+            </div>
+            <div class="product-about">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              provident quisquam natus nisi excepturi, modi
+            </div>
+            <div class="product-purchase-details">
+              <button class="product-purchase-btn">ADD TO BAG</button>
+              <div class="product-values">
+                <span>$</span>
+                <span class="product-price">770.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-image">
+            <img src="jordan-5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <!---------------------Cart--------------->
+    <div class="cart">
+      <h1>Cart</h1>
+      <hr />
+      <ul class="cart-products"></ul>
+      <div class="total">
+        <h2>Total</h2>
+        <div class="total-values">
+          <span>$</span>
+          <span class="total-price">34.00</span>
+        </div>
+      </div>
+    </div>
+    <!----AlertModal---------->
+    <div class="modal">
+      <div class="modal-msg">
+        <img
+          class="modal-img"
+          src="iconfinder_ic_add_shopping_cart_48px_352007.png"
+          alt=""
+        />
+        <h4>Current item present in the cart.</h4>
+        <button class="ok-modal-btn">Go Back</button>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <script src="store.js"></script>
+  </body>
+</html>
