@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Coda');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Coda', cursive;
+  background: #fffafa;
+  color: #1a1a1a;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  position: relative;
+}
+
+header .logo {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  margin-left: 15px;
+  color: #303030;
+  display: block;
+  font-weight: bold;
+}
+header ul li:nth-child(3) a {
+  border-bottom: 2px solid #303030;
+  position: relative;
+  color: #1a1a1a;
+}
+header ul li:nth-child(3) a:before {
+  content: '';
+  top: -5px;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  position: absolute;
+}
+header ul li:last-child a i {
+  color: #1a1a1a;
+}
+.burger {
+  position: absolute;
+  line-height: 8vh;
+  right: 15px;
+  font-size: 22px !important;
+  display: none !important;
+  cursor: pointer;
+}
+
+.active.burger::after {
+  content: '\f00d';
+  font-family: FontAwesome;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fffafa;
+}
+@media (max-width: 768px) {
+  header ul {
+    display: block;
+    top: 8vh;
+    position: absolute;
+    background: #fffafa;
+    width: 100%;
+    left: 0;
+    transition: transform 0.2s ease-in;
+    transform: translateX(100%) scale(0);
+    text-align: center;
+  }
+  header ul li {
+    width: 100px;
+    margin: 0 auto;
+  }
+  header ul li a {
+    padding: 10px 0;
+    display: block;
+  }
+  header ul.active {
+    transform: translateX(0) scale(1);
+  }
+  .burger {
+    display: block !important;
+  }
+  header {
+    justify-content: start;
+    padding-left: 10%;
+  }
+}
+/*Product*/
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 95%;
+  justify-content: space-around;
+}
+.product {
+  display: grid;
+  max-width: 400px;
+  overflow: hidden;
+  height: 250px;
+  background: ;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+}
+.product-image {
+  margin: auto 0;
+}
+.product-image img {
+  max-width: 100%;
+}
+.product-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-purchase-btn {
+  background: #1a1a1a;
+  color: #f8f8ff;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+}
+.product-purchase-details {
+  margin-top: 15px;
+}
+.product-about {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #545454;
+}
+.product-values {
+  display: inline-block;
+}
+.product-purchase-btn {
+  cursor: pointer;
+}
+/*Cart*/
+.cart {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 50px;
+}
+.cart-item {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bbbbbc;
+  padding: 10px 0;
+}
+.item-image {
+  width: 200px;
+}
+.item-image img {
+  max-width: 100%;
+}
+.item-number {
+  width: 30px;
+}
+.items-quantity {
+  display: flex;
+}
+.item-remove {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.item-values {
+  display: flex;
+}
+.item-name {
+  font-weight: bold;
+}
+/*Total*/
+.total {
+  margin-top: 30px;
+  text-align: right;
+}
+.total-price {
+  color: #6c6c6c;
+}
+.total-values {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .item-image {
+    width: 150px;
+  }
+  .cart-item {
+    font-size: 15px;
+  }
+}
+/*Modal*/
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: none;
+}
+.modal-msg {
+  max-width: 80%;
+  width: 600px;
+
+  padding: 10px;
+  margin: 0 auto;
+  background: #f8f8ff;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/*Modal*/
+.ok-modal-btn {
+  display: block;
+  margin: 10px auto;
+  background: #1e3cbc;
+  color: #f8f8ff;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.modal-img {
+  width: 100px;
+}
